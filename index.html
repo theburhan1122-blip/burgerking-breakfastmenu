@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King Lunch Menu with Prices, Deals, Hours 2026</title>
+    <meta name="description" content="Updated 2026 Burger King Lunch Menu with prices, calories, deals, and hours. The ultimate guide to eating like a King.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bk: {
+                            red: '#EC1C24',
+                            orange: '#F58025',
+                            yellow: '#FDBD10',
+                            brown: '#502314',
+                            cream: '#FBF7F0',
+                            blue: '#0066B2'
+                        }
+                    },
+                    fontFamily: {
+                        'headings': ['"Fredoka One"', 'cursive'],
+                        'body': ['"Inter"', 'sans-serif'],
+                        'menu': ['"Oswald"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FBF7F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #EC1C24;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C0151B;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 0px rgba(80, 35, 20, 0.1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Hero Pattern */
+        .hero-pattern {
+            background-color: #FDBD10;
+            background-image: radial-gradient(#F58025 20%, transparent 20%),
+                              radial-gradient(#F58025 20%, transparent 20%);
+            background-position: 0 0, 25px 25px;
+            background-size: 50px 50px;
+        }
+
+        /* Flame Animation for decoration */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.95); }
+        }
+        .flame-anim {
+            animation: flicker 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-bk-cream text-bk-brown font-body leading-relaxed">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-bk-red shadow-lg border-b-4 border-bk-orange">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-bk-cream rounded-full p-2 w-12 h-12 flex items-center justify-center shadow-md group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fas fa-hamburger text-bk-red text-2xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-headings text-white text-xl tracking-wide leading-none">BURGER KING</span>
+                    <span class="font-menu text-bk-yellow text-sm font-bold tracking-widest uppercase">Unofficial Guide 2026</span>
+                </div>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-6">
+                <a href="#menu" class="font-headings text-white text-lg hover:text-bk-yellow transition-colors">Full Menu</a>
+                <a href="#deals" class="font-headings text-white text-lg hover:text-bk-yellow transition-colors">Deals</a>
+                <a href="#top-picks" class="font-headings text-white text-lg hover:text-bk-yellow transition-colors">Top Picks</a>
+                <a href="#faq" class="font-headings text-white text-lg hover:text-bk-yellow transition-colors">FAQ</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-bk-brown border-t border-bk-orange">
+            <a href="#menu" class="block px-4 py-3 text-white font-bold hover:bg-bk-red">Full Menu</a>
+            <a href="#deals" class="block px-4 py-3 text-white font-bold hover:bg-bk-red">Deals</a>
+            <a href="#top-picks" class="block px-4 py-3 text-white font-bold hover:bg-bk-red">Top Picks</a>
+            <a href="#faq" class="block px-4 py-3 text-white font-bold hover:bg-bk-red">FAQ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-16 md:py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <div class="inline-block bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm border-2 border-bk-red transform -rotate-2">
+                <span class="text-bk-red font-bold uppercase tracking-wider text-sm"><i class="fas fa-fire mr-2"></i>Updated for 2026</span>
+            </div>
+            <h1 class="font-headings text-5xl md:text-7xl text-bk-red mb-6 text-shadow bg-white/80 inline-block px-8 py-4 rounded-3xl border-4 border-bk-brown shadow-[8px_8px_0px_0px_rgba(80,35,20,1)]">
+                LUNCH LIKE A KING
+            </h1>
+            <p class="text-lg md:text-xl font-medium max-w-2xl mx-auto bg-white/90 p-6 rounded-2xl shadow-lg border-2 border-bk-orange text-bk-brown">
+                Stop overpaying. The <a href="https://burgerking-breakfast-menu.com/burger-king-lunch-menu-with-prices/">Burger King lunch menu in 2026</a> is still one of the best values in fast food. Real flame-grilled flavor, massive portions, and deals that keep your wallet happy.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#menu" class="bg-bk-red text-white font-headings text-xl px-8 py-4 rounded-full shadow-[0_4px_0_rgb(160,20,20)] hover:shadow-[0_2px_0_rgb(160,20,20)] hover:translate-y-[2px] transition-all flex items-center gap-2">
+                    <i class="fas fa-utensils"></i> View Prices
+                </a>
+                <a href="#deals" class="bg-bk-brown text-bk-yellow font-headings text-xl px-8 py-4 rounded-full shadow-[0_4px_0_rgb(40,15,10)] hover:shadow-[0_2px_0_rgb(40,15,10)] hover:translate-y-[2px] transition-all flex items-center gap-2">
+                    <i class="fas fa-tag"></i> See Deals
+                </a>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <i class="fas fa-hamburger text-white/20 text-9xl absolute -bottom-10 -left-10 transform rotate-45"></i>
+        <i class="fas fa-drumstick-bite text-white/20 text-8xl absolute top-10 -right-10 transform -rotate-12"></i>
+    </section>
+
+    <!-- Info Banner -->
+    <div class="bg-bk-brown text-white py-3 overflow-hidden">
+        <div class="container mx-auto px-4 flex justify-between items-center text-sm md:text-base font-bold uppercase tracking-widest whitespace-nowrap overflow-x-auto no-scrollbar">
+            <span class="mx-4"><i class="fas fa-clock text-bk-yellow mr-2"></i>Lunch Starts 10:30 AM</span>
+            <span class="mx-4 text-bk-orange">•</span>
+            <span class="mx-4"><i class="fas fa-fire text-bk-yellow mr-2"></i>Flame Grilled Daily</span>
+            <span class="mx-4 text-bk-orange">•</span>
+            <span class="mx-4"><i class="fas fa-mobile-alt text-bk-yellow mr-2"></i>Mobile App Deals</span>
+        </div>
+    </div>
+
+    <!-- Deals Section -->
+    <section id="deals" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-headings text-4xl text-bk-brown mb-2">King-Sized Deals</h2>
+                <div class="h-1 w-20 bg-bk-orange mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Deal 1 -->
+                <div class="bg-bk-cream border-2 border-bk-red rounded-2xl p-6 relative overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="absolute top-0 right-0 bg-bk-red text-white text-xs font-bold px-3 py-1 rounded-bl-xl">POPULAR</div>
+                    <div class="text-bk-red text-4xl mb-3"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <h3 class="font-headings text-2xl mb-2">2 for $6 Mix & Match</h3>
+                    <p class="text-sm text-gray-600 mb-4">Choose two: Whopper Jr., Chicken Jr., or small fries. The perfect quick lunch fix.</p>
+                </div>
+                <!-- Deal 2 -->
+                <div class="bg-bk-cream border-2 border-bk-orange rounded-2xl p-6 relative overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="text-bk-orange text-4xl mb-3"><i class="fas fa-crown"></i></div>
+                    <h3 class="font-headings text-2xl mb-2">Royal Perks</h3>
+                    <p class="text-sm text-gray-600 mb-4">Earn Crowns with every order. Get free upsizes, exclusive offers, and birthday rewards.</p>
+                </div>
+                <!-- Deal 3 -->
+                <div class="bg-bk-cream border-2 border-bk-blue rounded-2xl p-6 relative overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="text-bk-blue text-4xl mb-3"><i class="fas fa-mobile-screen"></i></div>
+                    <h3 class="font-headings text-2xl mb-2">$1 Wedges</h3>
+                    <p class="text-sm text-gray-600 mb-4">Check the app for "Widget Wednesday" or similar rotating daily deals on sides!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Menu Table Section -->
+    <section id="menu" class="py-16 bg-bk-cream">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="font-headings text-4xl md:text-5xl text-bk-red mb-4">2026 Lunch Menu & Prices</h2>
+                <p class="text-gray-600">Nationwide USA Average Prices. Prices may vary by location. For updated prices, please visit <a href="https://burgerking-breakfast-menu.com/">burgerking-breakfast-menu.com</a></p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+                <!-- Search/Filter (Visual only for UX demo) -->
+                <div class="p-4 bg-bk-brown flex justify-between items-center">
+                    <span class="text-white font-bold font-headings tracking-wide text-lg"><i class="fas fa-list mr-2"></i> FULL MENU</span>
+                    <div class="relative hidden sm:block">
+                        <input type="text" placeholder="Search menu..." class="bg-white/10 text-white placeholder-white/70 border border-white/20 rounded-full px-4 py-1 text-sm focus:outline-none focus:bg-white/20 transition-colors">
+                        <i class="fas fa-search absolute right-3 top-1.5 text-white/50 text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 border-b-2 border-bk-orange">
+                                <th class="p-4 font-headings text-bk-brown text-lg w-1/2">Menu Item</th>
+                                <th class="p-4 font-headings text-bk-red text-lg">Price</th>
+                                <th class="p-4 font-headings text-gray-500 text-lg hidden sm:table-cell">Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-bk-brown font-medium">
+                            <!-- Meals -->
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 flex items-center gap-3">
+                                    <div class="bg-red-100 p-2 rounded-lg text-bk-red"><i class="fas fa-burger"></i></div>
+                                    Bacon King Meal
+                                </td>
+                                <td class="p-4 font-bold">$16.49</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">1200-1900</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 flex items-center gap-3">
+                                    <div class="bg-red-100 p-2 rounded-lg text-bk-red"><i class="fas fa-burger"></i></div>
+                                    Double Whopper Meal
+                                </td>
+                                <td class="p-4 font-bold">$14.79</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">1300-1900</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 flex items-center gap-3">
+                                    <div class="bg-green-100 p-2 rounded-lg text-green-700"><i class="fas fa-leaf"></i></div>
+                                    Impossible Whopper Meal
+                                </td>
+                                <td class="p-4 font-bold">$14.89</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">800-1400</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100 bg-bk-cream/30">
+                                <td class="p-4 flex items-center gap-3">
+                                    <div class="bg-red-100 p-2 rounded-lg text-bk-red"><i class="fas fa-crown"></i></div>
+                                    Whopper Meal
+                                </td>
+                                <td class="p-4 font-bold">$13.59</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">900-1500</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 flex items-center gap-3">
+                                    <div class="bg-yellow-100 p-2 rounded-lg text-yellow-700"><i class="fas fa-drumstick-bite"></i></div>
+                                    Original Chicken Sandwich Meal
+                                </td>
+                                <td class="p-4 font-bold">$13.59</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">700-1300</td>
+                            </tr>
+                            <!-- Burgers Only -->
+                            <tr class="bg-gray-100/50">
+                                <td colspan="3" class="p-2 px-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Burgers & Sandwiches</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Texas Double Whopper</td>
+                                <td class="p-4 font-bold">$11.69</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">1090</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Whopper Jr.</td>
+                                <td class="p-4 font-bold">$5.69</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">330</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Bacon Double Cheeseburger</td>
+                                <td class="p-4 font-bold">$5.39</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">440</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Cheeseburger</td>
+                                <td class="p-4 font-bold">$3.39</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">290</td>
+                            </tr>
+                             <!-- Chicken & Fish -->
+                             <tr class="bg-gray-100/50">
+                                <td colspan="3" class="p-2 px-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Chicken, Fish & Sides</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Chicken Fries (12 Pc.)</td>
+                                <td class="p-4 font-bold">$7.69</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">340</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Big Fish</td>
+                                <td class="p-4 font-bold">$7.89</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">570</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Mozzarella Sticks</td>
+                                <td class="p-4 font-bold">$2.79</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">330</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50 transition-colors border-b border-gray-100">
+                                <td class="p-4 pl-8">Hershey’s Sundae Pie</td>
+                                <td class="p-4 font-bold">$2.69</td>
+                                <td class="p-4 text-gray-500 text-sm hidden sm:table-cell">310</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray-50 p-4 text-center text-xs text-gray-500">
+                    *Prices are estimates based on national averages and may vary by franchise location. 2,000 calories a day is used for general nutrition advice.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Picks Section -->
+    <section id="top-picks" class="py-16 bg-white relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-bk-red font-bold uppercase tracking-widest text-sm">Customer Favorites</span>
+                <h2 class="font-headings text-4xl md:text-5xl text-bk-brown mt-2">Top 6 Items You Need To Try</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent hover:border-bk-orange transition-all duration-300 card-hover group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-bk-red text-white w-10 h-10 rounded-full flex items-center justify-center font-headings text-lg shadow-md">1</div>
+                        <i class="fas fa-heart text-gray-300 group-hover:text-red-500 transition-colors cursor-pointer"></i>
+                    </div>
+                    <div class="h-40 flex items-center justify-center bg-bk-cream rounded-2xl mb-6 relative overflow-hidden">
+                         <i class="fas fa-burger text-bk-brown/20 text-8xl absolute transform -rotate-12"></i>
+                         <i class="fas fa-bacon text-bk-red text-6xl relative z-10 drop-shadow-md"></i>
+                    </div>
+                    <h3 class="font-headings text-2xl text-bk-brown mb-2">Bacon King</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">The undisputed champion. Two flame-grilled beef patties, a ridiculous amount of crispy bacon, melted American cheese, and mayo on a toasted sesame bun. This burger doesn’t ask for permission — it walks in and owns the room. One bite and you’ll understand why people drive out of their way for it. I still dream about the smoky bacon crunch.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent hover:border-bk-orange transition-all duration-300 card-hover group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-bk-red text-white w-10 h-10 rounded-full flex items-center justify-center font-headings text-lg shadow-md">2</div>
+                        <i class="fas fa-heart text-gray-300 group-hover:text-red-500 transition-colors cursor-pointer"></i>
+                    </div>
+                    <div class="h-40 flex items-center justify-center bg-bk-cream rounded-2xl mb-6 relative overflow-hidden">
+                        <i class="fas fa-burger text-bk-brown/20 text-8xl absolute transform rotate-12"></i>
+                        <span class="text-4xl font-headings text-bk-brown z-10">2x BEEF</span>
+                    </div>
+                    <h3 class="font-headings text-2xl text-bk-brown mb-2">Double Whopper</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Double the flame-grilled patties, double the juice running down your wrist. Fresh lettuce, ripe tomatoes, pickles, onions, and that signature Whopper sauce. It’s the burger that made Burger King famous for a reason — every bite tastes like summer cookouts. My personal “I had a rough day, fix it” order.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent hover:border-bk-orange transition-all duration-300 card-hover group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-headings text-lg shadow-md">3</div>
+                        <i class="fas fa-heart text-gray-300 group-hover:text-red-500 transition-colors cursor-pointer"></i>
+                    </div>
+                    <div class="h-40 flex items-center justify-center bg-bk-cream rounded-2xl mb-6 relative overflow-hidden">
+                         <i class="fas fa-leaf text-green-600 text-6xl relative z-10 drop-shadow-md"></i>
+                    </div>
+                    <h3 class="font-headings text-2xl text-bk-brown mb-2">Impossible Whopper</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Flame-grilled Impossible patty that bleeds, sears, and tastes terrifyingly close to the real thing. Same toppings, same sesame bun, zero meat. Even die-hard carnivores order this now. I watched my meat-loving dad finish one and whisper “do that again.”</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent hover:border-bk-orange transition-all duration-300 card-hover group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-bk-red text-white w-10 h-10 rounded-full flex items-center justify-center font-headings text-lg shadow-md">4</div>
+                        <i class="fas fa-heart text-gray-300 group-hover:text-red-500 transition-colors cursor-pointer"></i>
+                    </div>
+                    <div class="h-40 flex items-center justify-center bg-bk-cream rounded-2xl mb-6 relative overflow-hidden">
+                         <i class="fas fa-drumstick-bite text-bk-yellow text-6xl relative z-10 drop-shadow-md transform rotate-45"></i>
+                    </div>
+                    <h3 class="font-headings text-2xl text-bk-brown mb-2">Original Chicken Sandwich</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Long, juicy, lightly breaded chicken fillet with crisp lettuce and creamy mayo on a toasted sesame bun. This sandwich has been perfect since the 90s and they’ve never messed with it. Pure comfort food that hits harder than it has any right to.</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent hover:border-bk-orange transition-all duration-300 card-hover group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-bk-red text-white w-10 h-10 rounded-full flex items-center justify-center font-headings text-lg shadow-md">5</div>
+                        <i class="fas fa-heart text-gray-300 group-hover:text-red-500 transition-colors cursor-pointer"></i>
+                    </div>
+                    <div class="h-40 flex items-center justify-center bg-bk-cream rounded-2xl mb-6 relative overflow-hidden">
+                        <i class="fas fa-fire text-bk-red text-6xl relative z-10 drop-shadow-md flame-anim"></i>
+                    </div>
+                    <h3 class="font-headings text-2xl text-bk-brown mb-2">Spicy BK Royal Crispy</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Crispy, juicy chicken fillet coated in spicy seasoning, topped with lettuce and tomato on a buttery potato bun. The heat builds perfectly — not too mild, not ghost-pepper stupid. It’s the sandwich I crave when I want flavor that punches back.</p>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-transparent hover:border-bk-orange transition-all duration-300 card-hover group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-bk-red text-white w-10 h-10 rounded-full flex items-center justify-center font-headings text-lg shadow-md">6</div>
+                        <i class="fas fa-heart text-gray-300 group-hover:text-red-500 transition-colors cursor-pointer"></i>
+                    </div>
+                    <div class="h-40 flex items-center justify-center bg-bk-cream rounded-2xl mb-6 relative overflow-hidden">
+                        <div class="flex gap-2">
+                             <div class="w-4 h-20 bg-bk-yellow rounded-full rotate-12 shadow-sm"></div>
+                             <div class="w-4 h-20 bg-bk-yellow rounded-full -rotate-6 shadow-sm"></div>
+                             <div class="w-4 h-20 bg-bk-yellow rounded-full rotate-3 shadow-sm"></div>
+                        </div>
+                    </div>
+                    <h3 class="font-headings text-2xl text-bk-brown mb-2">Chicken Fries</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Crispy, white-meat chicken shaped like fries so you can dip them in literally every sauce. Zesty, BBQ, ranch — doesn’t matter. People buy these by the dozen and guard them like treasure. I’ve seen grown adults fight over the last one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-bk-cream border-t border-bk-orange/20">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <i class="fas fa-question-circle text-bk-orange text-4xl mb-4"></i>
+                <h2 class="font-headings text-4xl text-bk-brown">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+
+    <!-- Question 1 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>What time does Burger King start serving lunch?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">10:30 AM daily at most locations, right after breakfast ends.</p>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Does Burger King serve lunch all day?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Yes — once lunch starts at 10:30 AM, you can order Whoppers, Crispy Chicken, and other lunch items until closing.</p>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Can I get the Impossible Whopper during lunch hours?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Absolutely, it’s available all day after 10:30 AM.</p>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Is the Bacon King still on the menu in 2026?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Yes, and it’s more popular than ever.</p>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>What’s the cheapest meal on the BK lunch menu?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Double Cheeseburger Meal or Whopper Jr. Meal — both under $10 in most places.</p>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Are Chicken Fries back permanently?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Yes, they’re a core menu item now, not limited-time.</p>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Does Burger King still have the 2 for $6 or 2 for $5 deals at lunch?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Yes, frequently — check the app daily for current offers.</p>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Can I order lunch items in the morning?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Only at 24-hour locations that serve the full menu all day.</p>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>Is the Texas Double Whopper spicy?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">No, but it’s massive — two patties, bacon, cheese, and jalapeños are optional.</p>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-bold text-bk-brown flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition-colors" onclick="toggleFaq(this)">
+            <span>What’s the best value lunch item right now?</span>
+            <i class="fas fa-chevron-down text-bk-red transition-transform"></i>
+        </button>
+        <div class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="py-4 text-gray-600 border-t border-gray-100">Hands down the Whopper Meal — still the king of fast-food value in 2026.</p>
+        </div>
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bk-brown text-white/80 py-12 border-t-8 border-bk-red">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="font-headings text-3xl text-white block mb-4">BURGER KING MENU GUIDE</span>
+                    <p class="text-sm max-w-sm">This is an informational fan website dedicated to providing the latest menu prices and nutritional information. We are not affiliated with Restaurant Brands International.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        
+                        <li><a href="https://aleenajohn12.codeberg.page/" class="hover:text-bk-yellow transition-colors">Daily Deals</a></li>
+                      
+                       
+                        <li><a href="https://bk-breakfast-menu.netlify.app/" class="hover:text-bk-yellow transition-colors">Full Menu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-bk-yellow transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-bk-yellow transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-bk-yellow transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm">
+                <p>&copy; 2026 Burger King Lunch Menu Guide. All rights reserved.</p>
+                <div class="mt-4 flex justify-center gap-4">
+                    <a href="#" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center hover:bg-bk-red transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center hover:bg-bk-red transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center hover:bg-bk-red transition-colors"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // FAQ Accordion Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.fa-chevron-down');
+            
+            // Toggle current
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+                content.classList.remove('py-4'); // Remove padding when closing
+                content.firstElementChild.classList.remove('border-t');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+                // Add padding after a tiny delay to ensure animation smooths out, or just CSS padding transition
+                // Simpler approach: padding is inside the inner p, max-height controls visibility
+            }
+        }
+
+        // Mobile Menu Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
